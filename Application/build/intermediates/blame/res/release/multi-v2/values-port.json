@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "291",
+                        "endColumns": "55",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1895,7 +1895,8 @@ public final class R {
     public static final int abc_textfield_search_material=0x7f06003a;
     public static final int ic_action_device_access_bluetooth_searching=0x7f06003b;
     public static final int ic_launcher=0x7f06003c;
-    public static final int notification_template_icon_bg=0x7f06003d;
+    public static final int ic_mic=0x7f06003d;
+    public static final int notification_template_icon_bg=0x7f06003e;
   }
   public static final class id {
     public static final int action0=0x7f070000;
@@ -1993,29 +1994,31 @@ public final class R {
     public static final int showCustom=0x7f07005c;
     public static final int showHome=0x7f07005d;
     public static final int showTitle=0x7f07005e;
-    public static final int split_action_bar=0x7f07005f;
-    public static final int src_atop=0x7f070060;
-    public static final int src_in=0x7f070061;
-    public static final int src_over=0x7f070062;
-    public static final int start=0x7f070063;
-    public static final int status_bar_latest_event_content=0x7f070064;
-    public static final int submit_area=0x7f070065;
-    public static final int tabMode=0x7f070066;
-    public static final int text=0x7f070067;
-    public static final int text2=0x7f070068;
-    public static final int textSpacerNoButtons=0x7f070069;
-    public static final int time=0x7f07006a;
-    public static final int title=0x7f07006b;
-    public static final int title_new_devices=0x7f07006c;
-    public static final int title_paired_devices=0x7f07006d;
-    public static final int title_template=0x7f07006e;
-    public static final int top=0x7f07006f;
-    public static final int topPanel=0x7f070070;
-    public static final int up=0x7f070071;
-    public static final int useLogo=0x7f070072;
-    public static final int vertical=0x7f070073;
-    public static final int withText=0x7f070074;
-    public static final int wrap_content=0x7f070075;
+    public static final int speech_button=0x7f07005f;
+    public static final int speech_list=0x7f070060;
+    public static final int split_action_bar=0x7f070061;
+    public static final int src_atop=0x7f070062;
+    public static final int src_in=0x7f070063;
+    public static final int src_over=0x7f070064;
+    public static final int start=0x7f070065;
+    public static final int status_bar_latest_event_content=0x7f070066;
+    public static final int submit_area=0x7f070067;
+    public static final int tabMode=0x7f070068;
+    public static final int text=0x7f070069;
+    public static final int text2=0x7f07006a;
+    public static final int textSpacerNoButtons=0x7f07006b;
+    public static final int time=0x7f07006c;
+    public static final int title=0x7f07006d;
+    public static final int title_new_devices=0x7f07006e;
+    public static final int title_paired_devices=0x7f07006f;
+    public static final int title_template=0x7f070070;
+    public static final int top=0x7f070071;
+    public static final int topPanel=0x7f070072;
+    public static final int up=0x7f070073;
+    public static final int useLogo=0x7f070074;
+    public static final int vertical=0x7f070075;
+    public static final int withText=0x7f070076;
+    public static final int wrap_content=0x7f070077;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;
@@ -2054,18 +2057,19 @@ public final class R {
     public static final int activity_main=0x7f09001a;
     public static final int device_name=0x7f09001b;
     public static final int fragment_bluetooth_chat=0x7f09001c;
-    public static final int notification_media_action=0x7f09001d;
-    public static final int notification_media_cancel_action=0x7f09001e;
-    public static final int notification_template_big_media=0x7f09001f;
-    public static final int notification_template_big_media_narrow=0x7f090020;
-    public static final int notification_template_lines=0x7f090021;
-    public static final int notification_template_media=0x7f090022;
-    public static final int notification_template_part_chronometer=0x7f090023;
-    public static final int notification_template_part_time=0x7f090024;
-    public static final int select_dialog_item_material=0x7f090025;
-    public static final int select_dialog_multichoice_material=0x7f090026;
-    public static final int select_dialog_singlechoice_material=0x7f090027;
-    public static final int support_simple_spinner_dropdown_item=0x7f090028;
+    public static final int message=0x7f09001d;
+    public static final int notification_media_action=0x7f09001e;
+    public static final int notification_media_cancel_action=0x7f09001f;
+    public static final int notification_template_big_media=0x7f090020;
+    public static final int notification_template_big_media_narrow=0x7f090021;
+    public static final int notification_template_lines=0x7f090022;
+    public static final int notification_template_media=0x7f090023;
+    public static final int notification_template_part_chronometer=0x7f090024;
+    public static final int notification_template_part_time=0x7f090025;
+    public static final int select_dialog_item_material=0x7f090026;
+    public static final int select_dialog_multichoice_material=0x7f090027;
+    public static final int select_dialog_singlechoice_material=0x7f090028;
+    public static final int support_simple_spinner_dropdown_item=0x7f090029;
   }
   public static final class menu {
     public static final int bluetooth_chat=0x7f0a0000;
@@ -2098,12 +2102,13 @@ public final class R {
     public static final int secure_connect=0x7f0b0018;
     public static final int select_device=0x7f0b0019;
     public static final int send=0x7f0b001a;
-    public static final int status_bar_notification_info_overflow=0x7f0b001b;
-    public static final int title_connected_to=0x7f0b001c;
-    public static final int title_connecting=0x7f0b001d;
-    public static final int title_not_connected=0x7f0b001e;
-    public static final int title_other_devices=0x7f0b001f;
-    public static final int title_paired_devices=0x7f0b0020;
+    public static final int speech=0x7f0b001b;
+    public static final int status_bar_notification_info_overflow=0x7f0b001c;
+    public static final int title_connected_to=0x7f0b001d;
+    public static final int title_connecting=0x7f0b001e;
+    public static final int title_not_connected=0x7f0b001f;
+    public static final int title_other_devices=0x7f0b0020;
+    public static final int title_paired_devices=0x7f0b0021;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;

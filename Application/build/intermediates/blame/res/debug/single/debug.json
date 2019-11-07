@@ -100,6 +100,10 @@
         "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/drawable-xhdpi/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/drawable-hdpi_ic_mic.png.flat",
+        "source": "/home/chevylin/Workspace/BTRCInput/Application/src/main/res/drawable-hdpi/ic_mic.png"
+    },
+    {
         "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/drawable-xhdpi_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/drawable-xhdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -302,6 +306,10 @@
     {
         "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
         "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/layout_message.xml.flat",
+        "source": "/home/chevylin/Workspace/BTRCInput/Application/src/main/res/layout/message.xml"
     },
     {
         "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_device_access_bluetooth_searching.png.flat",
@@ -974,6 +982,10 @@
     {
         "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/drawable-xxhdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/drawable-mdpi_ic_mic.png.flat",
+        "source": "/home/chevylin/Workspace/BTRCInput/Application/src/main/res/drawable-mdpi/ic_mic.png"
     },
     {
         "merged": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/res/merged/debug/color-v11_abc_background_cache_hint_selector_material_dark.xml.flat",

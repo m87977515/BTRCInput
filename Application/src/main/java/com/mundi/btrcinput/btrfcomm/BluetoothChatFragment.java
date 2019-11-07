@@ -24,6 +24,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -36,12 +39,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * This fragment controls Bluetooth to communicate with other devices.
@@ -55,9 +62,10 @@ public class BluetoothChatFragment extends Fragment {
     private static final int REQUEST_ENABLE_BT = 2;
 
     // Layout Views
-    //private ListView mConversationView;
+    private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
+    private Button mSpeechButton;
 
     /**
      * Name of the connected device
@@ -67,7 +75,7 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * Array adapter for the conversation thread
      */
-    //private ArrayAdapter<String> mConversationArrayAdapter;
+    private ArrayAdapter<String> mConversationArrayAdapter;
 
     /**
      * String buffer for outgoing messages
@@ -85,6 +93,8 @@ public class BluetoothChatFragment extends Fragment {
     private BluetoothChatService mChatService = null;
 
     private boolean isConnected = false;
+
+    private SpeechRecognizer mSpeechRecognizer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -118,6 +128,8 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onDestroy() {
+        mSpeechRecognizer.destroy();
+        mSpeechRecognizer = null;
         super.onDestroy();
         if (mChatService != null) {
             mChatService.stop();
@@ -148,9 +160,10 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        //mConversationView = (ListView) view.findViewById(R.id.in);
+        mConversationView = (ListView) view.findViewById(R.id.speech_list);
         mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
         mSendButton = (Button) view.findViewById(R.id.button_send);
+        mSpeechButton = (Button) view.findViewById(R.id.speech_button);
     }
 
     /**
@@ -160,9 +173,9 @@ public class BluetoothChatFragment extends Fragment {
         Log.d(TAG, "setupChat()");
 
         // Initialize the array adapter for the conversation thread
-        //mConversationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.message);
+        mConversationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.message);
 
-        //mConversationView.setAdapter(mConversationArrayAdapter);
+        mConversationView.setAdapter(mConversationArrayAdapter);
 
         // Initialize the compose field with a listener for the return key
         mOutEditText.setOnEditorActionListener(mWriteListener);
@@ -179,6 +192,40 @@ public class BluetoothChatFragment extends Fragment {
                 }
             }
         });
+
+        mSpeechButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View view =  getView();
+                if (null != view) {
+                    //get the recognize intent
+                    Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                    //Specify the calling package to identify your application
+                    intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getClass().getPackage().getName());
+                    //Given an hint to the recognizer about what the user is going to say
+                    intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                    //specify the max number of results
+                    intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS,5);
+                    //User of SpeechRecognizer to "send" the intent.
+                    mSpeechRecognizer.startListening(intent);
+                    Log.i(TAG,"Intent sent");
+                }
+            }
+        });
+
+        mConversationView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                View view2 = getView();
+                ListView mListView = (ListView) parent;
+                if(null != view2) {
+                    mOutEditText.setText(mListView.getItemAtPosition(position).toString());
+                }
+            }
+        });
+
+        mSpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(getActivity());
+        mSpeechRecognizer.setRecognitionListener(new listener());
 
         // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(getActivity(), mHandler);
@@ -378,6 +425,52 @@ public class BluetoothChatFragment extends Fragment {
             }
         }
         return false;
+    }
+
+    /*
+     * The Recognitionlistener for the SpeechRecognizer.
+     */
+    class listener implements RecognitionListener {
+        public void onReadyForSpeech(Bundle params)	{
+            Log.d(TAG, "onReadyForSpeech");
+        }
+        public void onBeginningOfSpeech(){
+            Log.d(TAG, "onBeginningOfSpeech");
+        }
+        public void onRmsChanged(float rmsdB){
+            Log.d(TAG, "onRmsChanged");
+        }
+        public void onBufferReceived(byte[] buffer)	{
+            Log.d(TAG, "onBufferReceived");
+        }
+        public void onEndOfSpeech()	{
+            Log.d(TAG, "onEndofSpeech");
+        }
+        public void onError(int error)	{
+            Log.d(TAG,  "error " +  error);
+        }
+        public void onResults(Bundle results) {
+
+            Log.d(TAG, "onResults " + results);
+            // Fill the list view with the strings the recognizer thought it could have heard, there should be 5, based on the call
+            ArrayList<String> matches = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+            mConversationArrayAdapter.addAll(matches);
+            //display results.
+            for (int i = 0; i < matches.size(); i++) {
+                Log.d(TAG, "result " + matches.get(i));
+            }
+            String str = matches.get(0);
+            mOutEditText.setText(str);
+        }
+        public void onPartialResults(Bundle partialResults)
+        {
+            Log.d(TAG, "onPartialResults");
+        }
+
+        public void onEvent(int eventType, Bundle params)
+        {
+            Log.d(TAG, "onEvent " + eventType);
+        }
     }
 
 }

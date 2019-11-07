@@ -1,0 +1,4 @@
+#Thu Nov 07 10:21:24 CST 2019
+base.0=/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

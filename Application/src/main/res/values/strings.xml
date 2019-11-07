@@ -35,5 +35,6 @@
 
     <!-- Options Menu -->
     <string name="secure_connect">Connect a device - Secure</string>
+    <string name="speech">Speech</string>
 
 </resources>

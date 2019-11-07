@@ -20,9 +20,12 @@
               android:orientation="vertical" >
 
     <ListView
+        android:id="@+id/speech_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:stackFromBottom="true"
         android:transcriptMode="alwaysScroll" />
 
@@ -30,6 +33,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/speech_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speech" />
 
         <EditText
             android:id="@+id/edit_text_out"

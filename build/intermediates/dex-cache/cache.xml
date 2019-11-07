@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/4.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="681725f2df9dffb9146110d518ec09ede62ed4ec">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/2.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="ea152c6608a8f378f684f071f7b0bf218b7473ad">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/3.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="413c9adda7a1a24f1bc097921d3ecd646fb5425e">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/6.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="abb687829fa106430514f7344c3f9efdea17f629">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/5.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="690cb263fdec61be3bed0cf2dde0a9905dafac2b">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/desugar/release/1.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="29.0.2"
+        sha1="07a0e93f38b1fd22dde1cdcbdd743efd87db718c">
+        <dex dex="/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/preDex/release/1.jar" />
+    </item>
+
+</items>
