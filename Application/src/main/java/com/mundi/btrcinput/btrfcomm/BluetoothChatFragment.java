@@ -198,6 +198,7 @@ public class BluetoothChatFragment extends Fragment {
             public void onClick(View v) {
                 View view =  getView();
                 if (null != view) {
+                    mConversationArrayAdapter.clear();
                     //get the recognize intent
                     Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                     //Specify the calling package to identify your application

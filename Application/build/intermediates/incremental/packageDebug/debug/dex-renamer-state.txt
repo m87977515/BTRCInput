@@ -1,4 +1,0 @@
-#Thu Nov 07 10:45:44 CST 2019
-base.0=/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
