@@ -210,7 +210,7 @@ public class BluetoothChatFragment extends Fragment {
                     //User of SpeechRecognizer to "send" the intent.
                     mSpeechRecognizer.startListening(intent);
                     Log.i(TAG,"Intent sent");
-                    Toast.makeText(getActivity(),getString(R.string.start_speek),Toast.LENGTH_LONG);
+                    Toast.makeText(getActivity(),R.string.start_speek,Toast.LENGTH_SHORT).show();
                 }
             }
         });
