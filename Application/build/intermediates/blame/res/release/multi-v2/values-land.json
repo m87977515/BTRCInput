@@ -1,23 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "/home/chevylin/Workspace/BTRCInput/Application/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/work/Workspace/Android/phoneapp/BTRCInput/Application/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/00dfbc65b29e3b4f2e366279ee104aa8/res/values-land/values-land.xml",
+                    "source": "/home/chevylin/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/values-land/values-land.xml",
                     "from": {
-                        "startLines": "4,7,10,11,14,17,18",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "291,590,908,978,1285,1595,1666",
-                        "endColumns": "61,71,69,69,63,70,67",
-                        "endOffsets": "348,657,973,1043,1344,1661,1729"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,259,329,393,464",
-                        "endColumns": "61,71,69,69,63,70,67",
-                        "endOffsets": "112,184,254,324,388,459,527"
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
                     }
                 }
             ]

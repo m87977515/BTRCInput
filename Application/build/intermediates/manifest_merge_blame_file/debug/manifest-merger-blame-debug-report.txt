@@ -1,0 +1,101 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2014 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.mundi.btrcinput"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="19"
+23-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml
+24        android:targetSdkVersion="26" />
+24-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml
+25
+26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+27
+28    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+28-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:26:5-73
+28-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:26:22-71
+29    <uses-permission android:name="android.permission.BLUETOOTH" />
+29-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:27:5-67
+29-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:27:22-65
+30    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+30-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:28:5-71
+30-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:28:22-68
+31    <uses-permission android:name="android.permission.INTERNET" />
+31-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:29:5-67
+31-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:29:22-64
+32    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+32-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:30:5-79
+32-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:30:22-76
+33
+34    <application
+34-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:32:5-54:19
+35        android:allowBackup="true"
+35-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:33:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/f01b27bb220ecb79298884ef36a7a2fb/core-1.1.0/AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:icon="@drawable/ic_launcher"
+38-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:34:9-45
+39        android:label="@string/app_name"
+39-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:35:9-41
+40        android:theme="@style/AppTheme" >
+40-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:36:9-40
+41        <activity
+41-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:38:9-46:20
+42            android:name="com.mundi.btrcinput.btrfcomm.MainActivity"
+42-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:39:13-41
+43            android:configChanges="orientation|keyboardHidden"
+43-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:40:13-63
+44            android:label="@string/app_name" >
+44-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:41:13-45
+45            <intent-filter>
+45-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:42:13-45:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:43:17-68
+46-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:43:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:44:17-76
+48-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:44:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity
+51-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:48:9-52:63
+52            android:name="com.mundi.btrcinput.btrfcomm.DeviceListActivity"
+52-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:49:13-47
+53            android:configChanges="orientation|keyboardHidden"
+53-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:50:13-63
+54            android:label="@string/select_device"
+54-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:51:13-50
+55            android:theme="@android:style/Theme.Holo.Dialog" />
+55-->/work/Workspace/Android/phoneapp/BTRCInput/Application/src/main/AndroidManifest.xml:52:13-61
+56
+57        <provider
+57-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/55580b0ab45b69249933074462ab11c2/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+58            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+58-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/55580b0ab45b69249933074462ab11c2/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
+59            android:authorities="com.mundi.btrcinput.lifecycle-process"
+59-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/55580b0ab45b69249933074462ab11c2/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+60            android:exported="false"
+60-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/55580b0ab45b69249933074462ab11c2/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+61            android:multiprocess="true" />
+61-->[androidx.lifecycle:lifecycle-process:2.1.0] /home/chevylin/.gradle/caches/transforms-2/files-2.1/55580b0ab45b69249933074462ab11c2/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+62    </application>
+63
+64</manifest>

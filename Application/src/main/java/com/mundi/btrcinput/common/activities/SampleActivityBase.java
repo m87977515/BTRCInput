@@ -17,7 +17,8 @@
 package com.mundi.btrcinput.common.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Base launcher activity, to handle most of the common plumbing for samples.

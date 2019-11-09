@@ -1,0 +1,4 @@
+#Sat Nov 09 16:11:06 CST 2019
+base.0=/work/Workspace/Android/phoneapp/BTRCInput/Application/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
